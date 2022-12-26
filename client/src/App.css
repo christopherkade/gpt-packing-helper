@@ -1,0 +1,56 @@
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.label {
+  font-size: 3rem;
+}
+
+.input {
+  font-size: 3rem;
+  margin-left: 4px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--light);
+  caret-color: var(--light);
+  width: 200px;
+  color: var(--light);
+}
+
+@media only screen and (max-width: 600px) {
+  .label {
+    font-size: 2rem;
+  }
+
+  .input {
+    font-size: 2rem;
+  }
+}
+
+.input:focus {
+  outline: none;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 16px;
+  width: fit-content;
+}
+
+.link {
+  color: var(--secondary);
+}
+
+.link:hover {
+  opacity: 0.8;
+}
