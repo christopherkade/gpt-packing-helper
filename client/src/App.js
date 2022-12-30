@@ -10,10 +10,9 @@ function App() {
   const [gptAnswer, setGptAnswer] = useState(null);
 
   async function handleSubmit(e) {
-    // TODO: Fade out input, show loader & fade in answer
     e.preventDefault();
+
     setIsLoading(true);
-    console.log("865 --- submit", country);
 
     const response = await fetch("http://localhost:5001", {
       method: "POST",
@@ -27,11 +26,7 @@ function App() {
 
     if (response.ok) {
       const data = await response.json();
-      // const parsedData = data.bot.trim(); // trims any trailing spaces/'\n'
 
-      // typeText(messageDiv, parsedData);
-      // console.log("865 --- parsedData", parsedData);
-      console.log("865 --- DATA", data);
       setIsLoading(false);
       setGptAnswer(data.bot);
     } else {
